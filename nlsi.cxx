@@ -105,6 +105,6 @@ void linstep(cmplx* const psi0, cmplx* const psi1, const double dx, const int N,
 //-----------------------------------
 void nonlinstep(cmplx* const psi1, const double dt, const int N){
   for(int i=0; i<N; i++){
-    psi1[i] *= exp(cmplx(0,1)*pow(abs(psi1[i]),2)*dt);
+    psi1[i] *= exp(cmplx(0,-1)*pow(abs(psi1[i]),2)*dt);
   }
 }
